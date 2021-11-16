@@ -9,6 +9,7 @@ body{
     width: 100vw;
     height: 100vh;
     position: relative;
+    background-color: rgba(218, 224, 223, 1);
 }
 
 /*Utilities*/
@@ -17,12 +18,21 @@ body{
     flex-direction: row;
 }
 
+.flex2{
+    display: flex;
+    flex-direction: column;
+}
+
 nav{
     width: 100%;
     height: 60px;
     background-color: rgba(237, 237, 237, 1);
 }
 
+main{
+    width: 100%;
+    height: 93%;
+}
 
 /*Body Section*/
 .background{
@@ -81,13 +91,29 @@ nav{
 
 .utentSect .name{
     position: relative;
-    width: 400px;
+    width: 250px;
     top: 35%;
     font-weight: 700;
+    align-self: flex-start;
 }
 
-.utentSect .navButtons{
-    width: 50px;
+.nav1 .navButtons{
+    width: 150px;
     height: 100%;
     align-self: flex-end;
+    vertical-align: 60px;
+}
+
+/*Message Section*/
+.nav2 .utentSect .access{
+    font-size: 13px;
+    color: rgba(138, 143, 146, 1);
+    position: relative;
+    top: 22px;
+}
+
+.chatSpace main{
+    background-image: url(../img/mine.jpg);
+    background-repeat: repeat;
+    object-fit: contain;
 }
