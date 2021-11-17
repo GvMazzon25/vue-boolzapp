@@ -15,7 +15,6 @@ Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente r
 
  */
 
-
 const app = new Vue({
     el: '#app',
     data: {

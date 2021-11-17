@@ -34,12 +34,25 @@ main{
     height: 93%;
 }
 
+.placeholder{
+    font-weight: 700;
+    color: rgba(236, 234, 234, 0.7);
+}
+
 .mrgn-btt-20{
     margin-bottom: 20px;
 }
 
 .mrgn-lft-52{
     margin-left: 52px;
+}
+
+.b-color-green{
+    background-color: rgba(221, 250, 191, 1);
+}
+
+.b-color-white{
+    background-color: rgba(255, 255, 255, 1);
 }
 
 /*Body Section*/
@@ -112,6 +125,17 @@ main{
     vertical-align: 60px;
 }
 
+.nav1 .navButtons i{
+    margin-right: 10px;
+    color: rgba(186, 186, 186, 1);
+    font-size: 1.15rem;
+    position: relative;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+
+}
+
 .notifications{
     width: 100%;
     height: 80px;
@@ -127,6 +151,14 @@ main{
     font-size: 17px;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+.notifications .bell i{
+    font-size: 1.5rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .bellSect{
@@ -200,6 +232,12 @@ main{
 }
 
 /*Message Section*/
+
+/*Nav Section*/
+.nav2{
+    width: 100%;
+}
+
 .nav2 .utentSect .access{
     font-size: 13px;
     color: rgba(138, 143, 146, 1);
@@ -207,10 +245,27 @@ main{
     top: 22px;
 }
 
+.nav2 .navButtons{
+    width: 800px;
+}
+
+.nav2 .navButtons i{
+    margin-right: 10px;
+    color: rgba(186, 186, 186, 1);
+    font-size: 1.15rem;
+    position: relative;
+    top: 50%;
+    left: 87%;
+    transform: translate(-50%, -50%);
+}
+
+/*Chat Section*/
+
 .chatSpace main{
     background-image: url(../img/mine.jpg);
     background-repeat: repeat;
     object-fit: contain;
+    padding-top: 40px;
 }
 
 
@@ -223,6 +278,24 @@ main{
     height: 96%;
 }
 
+
+.message-box{
+    width: 81%;
+    height: 50px;
+    margin: 20px 100px;
+}
+
+.message-box .message{
+    width: 30%;
+    height: 100%;
+}
+
+.my{
+    justify-content: end;
+}
+
+/*ChatBar section*/
+
 .chat-bar{
     width: 100%;
     height: 80px;
@@ -233,6 +306,15 @@ main{
 .chat-bar .icon{
     width: 10%;
     height: 100%;
+}
+
+.chat-bar .icon i{
+    color: rgba(186, 186, 186, 1);
+    font-size: 1.50rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .chat-bar .chat{
