@@ -38,10 +38,24 @@
                             <div class="access">attiva notifiche desktop</div>
                         </div>
                     </section>
-                    <section class="search">
+                    <section class="search mrgn-btt-20">
                         <form action="">
-                            <input type="text" class="middle" id="fname" name="fname" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" class="middle
+                            " id="fname" name="fname" placeholder="Cerca o inizia una nuova chat">
                           </form>
+                    </section>
+                    <section class="contacts">
+                        <div v-for="contact in contacts" class="contact flex">
+                            <div class="contact-logo">
+                                <img :src="`./img/avatar${contact.avatar}.jpg`" 
+                                     :alt="contact.name">
+                            </div>
+                            <div class="contact-info">
+                                <h3>
+                                    <span class="contact-name">{{ contact.name }}</span>
+                                </h3>
+                            </div>
+                        </div>
                     </section>
                 </main>
             </div>
