@@ -25,7 +25,7 @@ const app = new Vue({
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        dateNow: 'Get date',
                         text: 'Hai portato a spasso il cane?',
                         status: 'sent'
                     },
@@ -47,7 +47,7 @@ const app = new Vue({
                 visible: true,
                 messages: [
                     {
-                        date: '20/03/2020 16:30:00',
+                        dateNow: 'Get date',
                         text: 'Ciao come stai?',
                         status: 'sent'
                     },
@@ -68,7 +68,7 @@ const app = new Vue({
                 visible: true,
                 messages: [
                     {
-                        date: '28/03/2020 10:10:40',
+                        dateNow: 'Get date',
                         text: 'La Marianna va in campagna',
                         status: 'received'
                     },
@@ -101,7 +101,27 @@ const app = new Vue({
                     }
                 ],
             },
-        ]
-        
+        ],
+        activeSlide: 0, 
+    },
+    created(){
+        dayjs.locale('it');
+        dayjs.extended(dayjs_plugin_relativeTime);
+    },
+    methods: {
+        getDate() {
+            const now = dayjs();
+            console.log(now)
+
+            const nowFormat = dayjs().format('DD MMMM YY');
+            console.log(nowFormat);
+
+            const today = dayjs();
+            this.dateNow = today.format('DD/MM/YYYY HH:mm:ss');
+
+            this.dayName = today.format('dddd');
+
+            this.punlishedDate = dayjs('2020-11-12').fromNow;
+        }
     }
 })

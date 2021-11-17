@@ -79,10 +79,16 @@
                 <main class="flex2">
                     <section class="messageSection flex2">
                         <div class="message-box flex my">
-                            <div class="message my-message b-color-green"></div>
+                            <div class="message my-message b-color-green flex2">
+                                <div class="text-content">Messaggio Inviato</div>
+                                <div class="message-data">{{ dateNow }}</div>
+                            </div>
                         </div>
                         <div class="message-box flex him">
-                            <div class="message him-message b-color-white"></div>
+                            <div class="message him-message b-color-white flex2">
+                                <div class="text-content">Messaggio Inviato</div>
+                                <div class="message-data">{{ dateNow }}</div>
+                            </div>
                         </div>
                        
                     </section>
@@ -100,6 +106,9 @@
             </div>
         </section>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/locale/it.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/plugin/relativeTime.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
