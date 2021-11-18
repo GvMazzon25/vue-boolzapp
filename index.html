@@ -45,8 +45,8 @@
                             " id="fname" name="fname" placeholder="Cerca o inizia una nuova chat">
                           </form>
                     </section>
-                    <section class="contacts">
-                        <div v-for="contact in contacts" class="contact flex">
+                    <section class="contacts ">
+                        <div v-for="contact in contacts" class="contact flex hover" >
                             <div class="contact-logo">
                                 <img :src="`./img/avatar${contact.avatar}.jpg`" 
                                      :alt="contact.name">
@@ -81,13 +81,13 @@
                         <div class="message-box flex my">
                             <div class="message my-message b-color-green flex2">
                                 <div class="text-content">Messaggio Inviato</div>
-                                <div class="message-data">{{ dateNow }}</div>
+                                <div class="message-data">{{ contacts.date }}</div>
                             </div>
                         </div>
                         <div class="message-box flex him">
                             <div class="message him-message b-color-white flex2">
                                 <div class="text-content">Messaggio Inviato</div>
-                                <div class="message-data">{{ dateNow }}</div>
+                                <div class="message-data">{{ contacts.date }}</div>
                             </div>
                         </div>
                        
@@ -106,9 +106,6 @@
             </div>
         </section>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/locale/it.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/plugin/relativeTime.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
