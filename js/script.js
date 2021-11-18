@@ -102,11 +102,25 @@ const app = new Vue({
                 ],
             },
         ],
-        activeContact: 0, 
+        activeContact: 0,
+        newMessage: '', 
+        
     },
    methods: {
        setActiveContact(index){
            this.activeContact = index;
+       },
+
+       addNewMessage() {
+           if(this.newMessage !== ''){
+               this.contacts[this.activeContact].messages.push({
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                text: 'this.newMessage',
+                status: 'sent'
+               })
+
+               this.newMessage='';
+           }
        }
    }
 })

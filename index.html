@@ -92,7 +92,6 @@
                             <span class="message-data">
                                 {{ message.date }}
                             </span>
-
                         </div>
                     </section>
                     <section class="chat-bar flex">
@@ -100,8 +99,14 @@
                         <div class="chat mrgn-lft-52 placeholder">
                             <form action="">
                                 <input type="text" class="middle placeholder
-                                " id="fname" name="fname" placeholder="Scrivi un messaggio">
-                              </form>
+                                " id="fname" 
+                                  name="fname" 
+                                  placeholder="Scrivi un messaggio"
+                                  v-model.trim='newMessage'
+                                  @keyup enter="addNewMessage"
+                                >
+                            </form>
+
                         </div>
                         <div class="icon"><i class="fa-solid fa-microphone"></i></div>
                     </section>
@@ -109,6 +114,7 @@
             </div>
         </section>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.7/dayjs.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
