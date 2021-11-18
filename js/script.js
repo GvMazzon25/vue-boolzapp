@@ -113,13 +113,23 @@ const app = new Vue({
 
        addNewMessage() {
            if(this.newMessage !== ''){
+               console.log('inset new message');
+               
                this.contacts[this.activeContact].messages.push({
                 date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: 'this.newMessage',
                 status: 'sent'
-               })
+               });
 
                this.newMessage='';
+
+               setTimeout(() => {
+                   this.contacts[this.activeContact].message.push({
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    text: 'Ok',
+                    status: 'received'
+                   }, 1000);
+               })
            }
        }
    }
