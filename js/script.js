@@ -106,7 +106,8 @@ const app = new Vue({
             },
         ],
         activeContact: 0,
-        newMessage: '', 
+        newMessage: '',
+        searchName: '', 
         
     },
    methods: {
@@ -133,6 +134,18 @@ const app = new Vue({
                         status: 'received'
                     },);
                }, 1000);
+           }
+       },
+       searchContact() {
+           let parola = this.name;
+           let parolaDivisa = parola.split('');
+
+           let search = this.searchName;
+           let searchSplit = search.split('');
+
+           if(searchSplit !== parolaDivisa){
+               let hide = document.getElementById('contact.less');
+               hide = classList.add()
            }
        }
    }

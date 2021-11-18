@@ -58,6 +58,14 @@ main{
     background-color: rgb(206, 208, 209);
 }
 
+.hide{
+    display: none;
+}
+
+.present{
+    display: block;
+}
+
 /*Body Section*/
 .background{
     width: 100%;

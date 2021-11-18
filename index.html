@@ -32,6 +32,7 @@
                     </div>
                 </nav>
                 <main>
+                    <!--Notifications section-->
                     <section class="notifications flex">
                         <div class="bell"><i class="fa-solid fa-bell-slash"></i></div>
                         <div class="bellSect">
@@ -41,12 +42,20 @@
                     </section>
                     <section class="search mrgn-btt-20">
                         <form action="">
-                            <input type="text" class="text-chat placeholder
-                            " id="fname" name="fname" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" 
+                              class="text-chat placeholder" 
+                              id="fname" 
+                              name="fname" 
+                              placeholder="Cerca o inizia una nuova chat"
+                              v-model.trim='newMessage'
+                              @keyup="searchContact"
+                            >
                           </form>
                     </section>
+                    <!--Contact Section-->
                     <section class="contacts ">
                         <div v-for="(contact, index) in contacts" 
+                             id="contact-less"
                              class="contact flex hover"
                              :class="`{active: index === activeContact}`"
                              @click="setActiveContact(index)"
