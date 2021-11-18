@@ -68,7 +68,7 @@ const app = new Vue({
                 visible: true,
                 messages: [
                     {
-                        date: 'Get date',
+                        date: '28/03/2020 10:20:08',
                         text: 'La Marianna va in campagna',
                         status: 'received'
                     },
@@ -102,7 +102,11 @@ const app = new Vue({
                 ],
             },
         ],
-        activeSlide: 0, 
+        activeContact: 0, 
     },
-   
+   methods: {
+       setActiveContact(index){
+           this.activeContact = index;
+       }
+   }
 })

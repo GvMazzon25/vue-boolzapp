@@ -46,7 +46,11 @@
                           </form>
                     </section>
                     <section class="contacts ">
-                        <div v-for="contact in contacts" class="contact flex hover" >
+                        <div v-for="(contact, index) in contacts" 
+                             class="contact flex hover"
+                             :class="`{active: index === activeContact}`"
+                             @click="setActiveContact(index)"
+                        >
                             <div class="contact-logo">
                                 <img :src="`./img/avatar${contact.avatar}.jpg`" 
                                      :alt="contact.name">
@@ -64,10 +68,10 @@
             <div class='chatSpace'>
                 <nav class="nav2 flex">
                     <div class="userImg">
-                        <img src="./img/avatar_3.jpg" alt="User">
+                        <img :src="`./img/avatar${contacts[activeContact].avatar}.jpg`" alt="User">
                     </div>
                     <div class="utentSect">
-                        <div class="name">Michele</div>
+                        <div class="name">{{ contacts[activeContact].name }}</div>
                         <div class="access">Ultimo accesso alle 10:35</div>
                     </div>
                     <div class="navButtons">
@@ -78,19 +82,18 @@
                 </nav>
                 <main class="flex2">
                     <section class="messageSection flex2">
-                        <div class="message-box flex my">
-                            <div class="message my-message b-color-green flex2">
-                                <div class="text-content">Messaggio Inviato</div>
-                                <div class="message-data">{{ contacts.date }}</div>
-                            </div>
+                        <div v-for= "message in contacts[activeContact]. messages"
+                             class="message flex2"
+                             :class="message.status"
+                        >
+                            <span class="message-text">
+                                {{ message.text }}
+                            </span>
+                            <span class="message-data">
+                                {{ message.date }}
+                            </span>
+
                         </div>
-                        <div class="message-box flex him">
-                            <div class="message him-message b-color-white flex2">
-                                <div class="text-content">Messaggio Inviato</div>
-                                <div class="message-data">{{ contacts.date }}</div>
-                            </div>
-                        </div>
-                       
                     </section>
                     <section class="chat-bar flex">
                         <div class="icon"><i class="fa-regular fa-face-grin"></i></div>
